@@ -14,11 +14,20 @@
             <div class="floor-name a-button">
                 <p>1st</p>
             </div>
-            <div id = "1" class="floor-rooms">
+            <div id="1" class="floor-rooms">
                 {% for r in rooms1 %}
-                    <div class="room {{ r.color }}">
-                        <a href="#" class="a-room"> {{ r.room_no }}</a>
-                    </div>
+                {% if r.color == "green" %}
+                <div class="room {{ r.color }}">
+                    <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#exampleModal_{{r.room_no}}"
+                       data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                </div>
+                {% endif %}
+                {% if r.color == "red" %}
+                <div class="room {{ r.color }}">
+                    <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#customer-visit_{{r.room_no}}"
+                       data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
@@ -26,11 +35,20 @@
             <div class="floor-name a-button">
                 <p>2nd</p>
             </div>
-            <div id = "2" class="floor-rooms">
+            <div id="2" class="floor-rooms">
                 {% for r in rooms2 %}
-                    <div class="room {{ r.color }}">
-                        <a href="#" class="a-room"> {{ r.room_no }}</a>
-                    </div>
+                    {% if r.color == "green" %}
+                        <div class="room {{ r.color }}">
+                            <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#exampleModal_{{r.room_no}}"
+                               data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                        </div>
+                    {% endif %}
+                    {% if r.color == "red" %}
+                        <div class="room {{ r.color }}">
+                            <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#customer-visit_{{r.room_no}}"
+                               data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
@@ -38,11 +56,20 @@
             <div class="floor-name a-button">
                 <p>3rd</p>
             </div>
-            <div id = "3" class="floor-rooms">
+            <div id="3" class="floor-rooms">
                 {% for r in rooms3 %}
-                    <div class="room {{ r.color }}">
-                        <a href="#" class="a-room"> {{ r.room_no }}</a>
-                    </div>
+                    {% if r.color == "green" %}
+                        <div class="room {{ r.color }}">
+                            <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#exampleModal_{{r.room_no}}"
+                               data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                        </div>
+                    {% endif %}
+                    {% if r.color == "red" %}
+                        <div class="room {{ r.color }}">
+                            <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#customer-visit_{{r.room_no}}"
+                               data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
@@ -50,11 +77,20 @@
             <div class="floor-name a-button">
                 <p>4th</p>
             </div>
-            <div id = "4" class="floor-rooms">
+            <div id="4" class="floor-rooms">
                 {% for r in rooms4 %}
-                    <div class="room {{ r.color }}">
-                        <a href="#" class="a-room"> {{ r.room_no }}</a>
-                    </div>
+                    {% if r.color == "green" %}
+                        <div class="room {{ r.color }}">
+                            <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#exampleModal_{{r.room_no}}"
+                               data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                        </div>
+                    {% endif %}
+                    {% if r.color == "red" %}
+                        <div class="room {{ r.color }}">
+                            <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#customer-visit_{{r.room_no}}"
+                               data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
@@ -62,20 +98,32 @@
             <div class="floor-name a-button">
                 <p>5th</p>
             </div>
-            <div id = "5" class="floor-rooms">
+            <div id="5" class="floor-rooms">
                 {% for r in rooms5 %}
-                    <div class="room {{ r.color }}">
-                        <a href="#" class="a-room"> {{ r.room_no }}</a>
-                    </div>
+                    {% if r.color == "green" %}
+                        <div class="room {{ r.color }}">
+                            <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#exampleModal_{{r.room_no}}"
+                               data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                        </div>
+                    {% endif %}
+                    {% if r.color == "red" %}
+                        <div class="room {{ r.color }}">
+                            <a href="#" class="a-room" data-bs-toggle="modal" data-bs-target="#customer-visit_{{r.room_no}}"
+                               data-bs-whatever="@mdo"> {{ r.room_no }}</a>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
     </div>
 </div>
 </div>
+{% include 'reception/boarderRegistration.html' %}
+{% include 'reception/BoarderVisit.html' %}
 {% endblock %}
 {% block homepagescript %}
 {% load static %}
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="{% static 'js\room.js' %}"> </script>
+<script src="{% static 'js\room.js' %}"></script>
+{% include 'CommonHTML/ajax.html' %}
 {% endblock %}

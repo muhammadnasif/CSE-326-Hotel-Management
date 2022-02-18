@@ -17,6 +17,17 @@ html {
   font-size: 3rem;
   font-weight: 900;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .nav-wrapper {
   margin: 0 auto;
   width: 80%;

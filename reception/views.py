@@ -6,6 +6,7 @@ from django.http import JsonResponse
 
 
 def getSingle(request):
+
     print(request.GET)
     dict = []
     s = request.GET['s']
@@ -38,6 +39,7 @@ def getSingle(request):
     return JsonResponse(dict,safe=False)
 
 def home(request):
+    request.session['undo_otherBoarder_list'] =[]
     dRoom1 = {}
     dRoom2 = {}
     dRoom3 = {}
