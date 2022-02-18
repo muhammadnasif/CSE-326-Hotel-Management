@@ -7,10 +7,11 @@ from phonenumber_field.formfields import PhoneNumberField
 class ROOM(models.Model):
     room_no = models.IntegerField()
     fare = models.IntegerField()
+    floor = models.IntegerField(default=0)
     capacity = models.IntegerField()
     type = models.CharField(max_length=20)
     description = models.CharField(max_length=100)
-    availability = models.BooleanField(default=False)
+    availability = models.IntegerField(default=0)
 
     def __str__(self):
         return str(self.room_no)
