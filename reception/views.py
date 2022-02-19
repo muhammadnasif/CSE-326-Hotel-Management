@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from reception.models import ROOM
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -137,6 +138,7 @@ def getSingle(request):
             new_l.append(d)
     return JsonResponse(new_l,safe=False)
 
+@login_required(login_url='login/')
 def home(request):
     request.session['undo_otherBoarder_list'] =[]
     dRoom1 = {}
@@ -237,3 +239,5 @@ def home(request):
     context['rooms4'] = dRooms4
     context['rooms5'] = dRooms5
     return render(request, 'reception/room.html', context)
+
+

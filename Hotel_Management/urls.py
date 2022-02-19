@@ -21,6 +21,7 @@ from django.urls import path
 import reception.views as reception_views
 import reception.logInOut as reception_loginout
 import reception.check_in as reception_checkin
+import reception.customer as customerSearchView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +33,7 @@ urlpatterns = [
     path('addOtherBoarder/', reception_checkin.addOtherBoarder, name='addOtherBoarder'),
     path('undoOtherBoarder/', reception_checkin.undoOtherBoarder, name='undoOtherBoarder'),
     path('checkout/', reception_checkin.checkout, name='checkout'),
+    path('customerSearch/', customerSearchView.customerSearch, name='customerSearch'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += staticfiles_urlpatterns()

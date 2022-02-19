@@ -10,9 +10,9 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <div class="navbar-nav ms-auto text-center me-3">
 
-                <a class="nav-item nav-link" href="#" >Room</a>
-                <a class="nav-item nav-link" href="#">Customer search</a>
-                <a class="nav-item nav-link btn-danger btn ms-3 text-white" href="#">Log Out</a>
+                <a class="nav-item nav-link" href="{% url 'home' %}" >Room</a>
+                <a class="nav-item nav-link" href="{% url 'customerSearch' %}">Customer search</a>
+                <a class="nav-item nav-link btn-danger btn ms-3 text-white" href="{% url 'LogOut' %}">Log Out</a>
 
             </div>
         </div>
