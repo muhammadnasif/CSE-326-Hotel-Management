@@ -2,13 +2,14 @@ from django.shortcuts import render
 from reception.models import ROOM
 from django.http import JsonResponse
 
+
 # Create your views here.
 
 
-def getSingle(request):
 
+def getSingle(request):
     print(request.GET)
-    dict = []
+    sendDict = []
     s = request.GET['s']
     d = request.GET['d']
     t = request.GET['t']
@@ -16,6 +17,24 @@ def getSingle(request):
     n = request.GET['n']
     dRoom = {}
     room = ROOM.objects.all()
+    if s=="0" and d=="0" and t=="0" and a=="0" and n=="0":
+        for r in room:
+            dRoom['room_no'] = r.room_no
+            dRoom['floor'] = r.floor
+            dRoom['fare'] = r.fare
+            dRoom['capacity'] = r.capacity
+            dRoom['type'] = r.type
+            dRoom['description'] = r.description
+            dRoom['availability'] = r.availability
+            if r.availability == 0:
+                dRoom['color'] = "green"
+            elif r.availability == 1:
+                dRoom['color'] = "red"
+            else:
+                dRoom['color'] = "yellow"
+            dRC = dRoom.copy()
+            sendDict.append(dRC)
+
     if s=="1":
         print('inside s==1')
         for r in room:
@@ -34,9 +53,89 @@ def getSingle(request):
                 else:
                     dRoom['color'] = "yellow"
                 dRC = dRoom.copy()
-                dict.append(dRC)
-    print(dict)
-    return JsonResponse(dict,safe=False)
+                sendDict.append(dRC)
+    if d=="1":
+        print('inside s==1')
+        for r in room:
+            if r.capacity == 2:
+                dRoom['room_no'] = r.room_no
+                dRoom['floor'] = r.floor
+                dRoom['fare'] = r.fare
+                dRoom['capacity'] = r.capacity
+                dRoom['type'] = r.type
+                dRoom['description'] = r.description
+                dRoom['availability'] = r.availability
+                if r.availability == 0:
+                    dRoom['color'] = "green"
+                elif r.availability == 1:
+                    dRoom['color'] = "red"
+                else:
+                    dRoom['color'] = "yellow"
+                dRC = dRoom.copy()
+                sendDict.append(dRC)
+    if t=="1":
+        for r in room:
+            if r.capacity == 3:
+                dRoom['room_no'] = r.room_no
+                dRoom['floor'] = r.floor
+                dRoom['fare'] = r.fare
+                dRoom['capacity'] = r.capacity
+                dRoom['type'] = r.type
+                dRoom['description'] = r.description
+                dRoom['availability'] = r.availability
+                if r.availability == 0:
+                    dRoom['color'] = "green"
+                elif r.availability == 1:
+                    dRoom['color'] = "red"
+                else:
+                    dRoom['color'] = "yellow"
+                dRC = dRoom.copy()
+                sendDict.append(dRC)
+    if a=="1":
+        for r in room:
+            if r.type == "AC" or r.type == "ac":
+                dRoom['room_no'] = r.room_no
+                dRoom['floor'] = r.floor
+                dRoom['fare'] = r.fare
+                dRoom['capacity'] = r.capacity
+                dRoom['type'] = r.type
+                dRoom['description'] = r.description
+                dRoom['availability'] = r.availability
+                if r.availability == 0:
+                    dRoom['color'] = "green"
+                elif r.availability == 1:
+                    dRoom['color'] = "red"
+                else:
+                    dRoom['color'] = "yellow"
+                dRC = dRoom.copy()
+                sendDict.append(dRC)
+    if n=="1":
+        for r in room:
+            if r.type == "NAC" or r.type == "nac":
+                dRoom['room_no'] = r.room_no
+                dRoom['floor'] = r.floor
+                dRoom['fare'] = r.fare
+                dRoom['capacity'] = r.capacity
+                dRoom['type'] = r.type
+                dRoom['description'] = r.description
+                dRoom['availability'] = r.availability
+                if r.availability == 0:
+                    dRoom['color'] = "green"
+                elif r.availability == 1:
+                    dRoom['color'] = "red"
+                else:
+                    dRoom['color'] = "yellow"
+                dRC = dRoom.copy()
+                sendDict.append(dRC)
+    print(sendDict)
+    seen = set()
+    new_l = []
+    for d in sendDict:
+        t = tuple(d.items())
+        if t not in seen:
+            seen.add(t)
+            new_l.append(d)
+    return JsonResponse(new_l,safe=False)
 
 def home(request):
     request.session['undo_otherBoarder_list'] =[]
