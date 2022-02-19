@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+/* Common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+.head-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.nav-wrapper {
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.nav-item {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+/* End of Common Styles */
+
+/* ==============All Wrapper ===================*/
+.wrapper {
+  margin: 0 auto;
+  margin-top: 7rem;
+  width: 70%;
+  height: 100vh;
+  background-color: #eee;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
+  transition: box-shadow 0.5s;
+}
+
+
+/* Filter Buttons====================================== */
+.filter-buttons {
+  display: flex;
+  justify-content: left;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+}
+.a-button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
+  color: #fff;
+  width: 10rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  border-radius: 4rem;
+  background: linear-gradient(90deg,#0162c8,#55e7fc);
+}
+.a-button:nth-child(4) {
+  margin-left: 39rem;
+  /*background: linear-gradient(90deg,#755bea,#ff72c0);*/
+  align-items: flex-end;
+}
+.a-button:nth-child(5) {
+  /*background: linear-gradient(90deg,#755bea,#ff72c0);*/
+  align-items: flex-end;
+}
+
+/*============================Floor Design====================*/
+.floors {
+  margin-top: 5%;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+}
+.floor {
+  width: 100%;
+  height: auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+.floor-name {
+  justify-content: center;
+  height: 4rem;
+}
+.floor-rooms {
+  width: 100%;
+  margin: 0 1rem;
+  background-color: #e5e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0.3rem 0.3rem 0.4rem #ccc, -0.1rem -0.1rem 0.4rem #ccc;
+  border-radius: 0.5rem;
+  /*perspective: 100rem;*/
+}
+
+.room {
+  /*background-color: rgba(238, 238, 238, 0.85);*/
+  padding: 1rem;
+  margin: 0 auto;
+  width: 5rem;
+  height: auto;
+  box-shadow: 0 2rem 5rem rgb(51 51 51 / 60%);
+  transform: skewX(10deg);
+}
+.room.green {
+  background-color: #20c997 ;
+}
+.room.red {
+  background-color: #dc3545 ;
+}
+.room.yellow {
+  background-color: #ffc107;
+}
+.a-room {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  /*padding: 1rem 1rem;*/
+  /*margin: 1rem 1rem;*/
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.01rem;
+  border-radius: 0.4rem;
+}

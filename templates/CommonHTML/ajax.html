@@ -1,0 +1,412 @@
+<script>
+
+    $('#checkin_submit_1').click(function (e) {
+        e.preventDefault()
+
+        console.log('button clicked')
+        let id = $(this).attr('data-room')
+        console.log("ID is " + id)
+        nameID = '#inputName_' + id
+        phoneID = '#inputPhone_' + id
+        addressID = '#inputAddress_' + id
+        emailID = '#inputEmail_' + id
+        nidID = '#inputNID_' + id
+
+        mydata = {
+            name: $(nameID).val(),
+            phone: $(phoneID).val(),
+            address: $(addressID).val(),
+            email: $(emailID).val(),
+            nid: $(nidID).val(),
+            room: id,
+        }
+
+        console.log(mydata)
+        $.ajax(
+            {
+                url: "{% url 'CheckIn' %}",
+                type: 'GET',
+                data: mydata,
+                success: function (data) {
+                    console.log("data received successfully")
+                    if (data.status == 0) {
+                        console.log("-000-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Customer is already in the hotel."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 1) {
+                        console.log("-111-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 2) {
+                        console.log("-222-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull. <div class='text-success'><b>New Customer Profile Created</b></div>"
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 3) {
+                        console.log("-333-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Form not filled properly"
+                        $("#toast_notification").toast("show")
+                    }
+                }
+            }
+        )
+    })
+    $('#checkin_submit_2').click(function (e) {
+        e.preventDefault()
+
+        console.log('button clicked')
+        let id = $(this).attr('data-room')
+        console.log("ID is " + id)
+        nameID = '#inputName_' + id
+        phoneID = '#inputPhone_' + id
+        addressID = '#inputAddress_' + id
+        emailID = '#inputEmail_' + id
+        nidID = '#inputNID_' + id
+
+        mydata = {
+            name: $(nameID).val(),
+            phone: $(phoneID).val(),
+            address: $(addressID).val(),
+            email: $(emailID).val(),
+            nid: $(nidID).val(),
+            room: id,
+        }
+
+        console.log(mydata)
+        $.ajax(
+            {
+                url: "{% url 'CheckIn' %}",
+                type: 'GET',
+                data: mydata,
+                success: function (data) {
+                    console.log("data received successfully")
+                    if (data.status == 0) {
+                        console.log("-000-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Customer is already in the hotel."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 1) {
+                        console.log("-111-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 2) {
+                        console.log("-222-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull. <div class='text-success'><b>New Customer Profile Created</b></div>"
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 3) {
+                        console.log("-333-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Form not filled properly"
+                        $("#toast_notification").toast("show")
+                    }
+                }
+            }
+        )
+    })
+    $('#checkin_submit_3').click(function (e) {
+        e.preventDefault()
+
+        console.log('button clicked')
+        let id = $(this).attr('data-room')
+        console.log("ID is " + id)
+        nameID = '#inputName_' + id
+        phoneID = '#inputPhone_' + id
+        addressID = '#inputAddress_' + id
+        emailID = '#inputEmail_' + id
+        nidID = '#inputNID_' + id
+
+        mydata = {
+            name: $(nameID).val(),
+            phone: $(phoneID).val(),
+            address: $(addressID).val(),
+            email: $(emailID).val(),
+            nid: $(nidID).val(),
+            room: id,
+        }
+
+        console.log(mydata)
+        $.ajax(
+            {
+                url: "{% url 'CheckIn' %}",
+                type: 'GET',
+                data: mydata,
+                success: function (data) {
+                    console.log("data received successfully")
+                    if (data.status == 0) {
+                        console.log("-000-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Customer is already in the hotel."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 1) {
+                        console.log("-111-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 2) {
+                        console.log("-222-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull. <div class='text-success'><b>New Customer Profile Created</b></div>"
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 3) {
+                        console.log("-333-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Form not filled properly"
+                        $("#toast_notification").toast("show")
+                    }
+                }
+            }
+        )
+    })
+    $('#checkin_submit_4').click(function (e) {
+        e.preventDefault()
+
+        console.log('button clicked')
+        let id = $(this).attr('data-room')
+        console.log("ID is " + id)
+        nameID = '#inputName_' + id
+        phoneID = '#inputPhone_' + id
+        addressID = '#inputAddress_' + id
+        emailID = '#inputEmail_' + id
+        nidID = '#inputNID_' + id
+
+        mydata = {
+            name: $(nameID).val(),
+            phone: $(phoneID).val(),
+            address: $(addressID).val(),
+            email: $(emailID).val(),
+            nid: $(nidID).val(),
+            room: id,
+        }
+
+        console.log(mydata)
+        $.ajax(
+            {
+                url: "{% url 'CheckIn' %}",
+                type: 'GET',
+                data: mydata,
+                success: function (data) {
+                    console.log("data received successfully")
+                    if (data.status == 0) {
+                        console.log("-000-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Customer is already in the hotel."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 1) {
+                        console.log("-111-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 2) {
+                        console.log("-222-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull. <div class='text-success'><b>New Customer Profile Created</b></div>"
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 3) {
+                        console.log("-333-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Form not filled properly"
+                        $("#toast_notification").toast("show")
+                    }
+                }
+            }
+        )
+    })
+    $('#checkin_submit_5').click(function (e) {
+        e.preventDefault()
+
+        console.log('button clicked')
+        let id = $(this).attr('data-room')
+        console.log("ID is " + id)
+        nameID = '#inputName_' + id
+        phoneID = '#inputPhone_' + id
+        addressID = '#inputAddress_' + id
+        emailID = '#inputEmail_' + id
+        nidID = '#inputNID_' + id
+
+        mydata = {
+            name: $(nameID).val(),
+            phone: $(phoneID).val(),
+            address: $(addressID).val(),
+            email: $(emailID).val(),
+            nid: $(nidID).val(),
+            room: id,
+        }
+
+        console.log(mydata)
+        $.ajax(
+            {
+                url: "{% url 'CheckIn' %}",
+                type: 'GET',
+                data: mydata,
+                success: function (data) {
+                    console.log("data received successfully")
+                    if (data.status == 0) {
+                        console.log("-000-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Customer is already in the hotel."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 1) {
+                        console.log("-111-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull."
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 2) {
+                        console.log("-222-")
+                        document.getElementById('toast_head_id').innerHTML = "Registration Successful"
+                        document.getElementById('toast_body_id').innerHTML = "Customer Check-in successfull. <div class='text-success'><b>New Customer Profile Created</b></div>"
+                        $("#toast_notification").toast("show")
+                    }
+                    if (data.status == 3) {
+                        console.log("-333-")
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-danger'>Error</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Form not filled properly"
+                        $("#toast_notification").toast("show")
+                    }
+                }
+            }
+        )
+    })
+
+
+    $(".btn-add-otherBoarder").click(function (e) {
+        e.preventDefault()
+        let id = $(this).attr('data-room')
+        let phn = $(this).attr('data-phone')
+        console.log("Other Boarder button clicked")
+        otherBoarder_text_id = "#otherBoarder_name_" + id
+        let name = $(otherBoarder_text_id).val()
+        console.log(otherBoarder_text_id)
+        console.log(name)
+
+        mydata = {
+            name: $(otherBoarder_text_id).val(),
+            room: id,
+            phone: phn,
+        }
+
+        $.ajax(
+            {
+                url: "{% url 'addOtherBoarder' %}",
+                type: 'GET',
+                data: mydata,
+                success: function (data) {
+                    console.log("Received from front end")
+                    console.log(otherBoarder)
+                    if (data.status == 1) {
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-success'>Success</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Other boarders added."
+                        $("#toast_notification").toast("show")
+                        $(otherBoarder_text_id).val("")
+                        otherBoarder_list_id = "other-boarder-list-id_" + data.id
+                        console.log(otherBoarder_list_id)
+                        var otherBoarder = JSON.parse(data.otherBoarder)
+
+                        var length = otherBoarder.length
+                        output = ""
+                        for (var i = 0; i < length; i++) {
+                            console.log(otherBoarder[i])
+                            output += '<p>' + (i + 2) + '. ' + otherBoarder[i].fields.customer_name + '</p>'
+                        }
+                        console.log("182737182387123")
+                        console.log(otherBoarder_list_id)
+                        document.getElementById(otherBoarder_list_id).innerHTML = output
+
+
+                    }
+                    if (data.status == 0) {
+                        document.getElementById('toast_head_id').innerHTML = "<div class='text-warning'>Warning</div>"
+                        document.getElementById('toast_body_id').innerHTML = "Enter a name in the boarder name"
+                        $("#toast_notification").toast("show")
+                    }
+                }
+            }
+        )
+    });
+
+    $(".btn-undo-otherBoarder").click(function (e) {
+        e.preventDefault()
+        let id = $(this).attr('data-room')
+        let phn = $(this).attr('data-phone')
+        console.log("Undo button clicked")
+        otherBoarder_text_id = "#otherBoarder_name_" + id
+        let name = $(otherBoarder_text_id).val()
+
+        mydata = {
+            room: id,
+            phone: phn,
+        }
+
+        $.ajax(
+            {
+                url: "{% url 'undoOtherBoarder' %}",
+                type: 'GET',
+                data: mydata,
+                success: function (data) {
+                    console.log("Received from front end")
+                    console.log("habi jabi")
+                    if (data.status == 1) {
+                        $(otherBoarder_text_id).val("")
+                        otherBoarder_list_id = "other-boarder-list-id_" + data.id
+                        console.log("+=========+++++++++++++++")
+                        console.log(otherBoarder_list_id)
+                        var otherBoarder = JSON.parse(data.otherBoarder)
+                        var length = otherBoarder.length
+                        output = ""
+                        for (var i = 0; i < length; i++) {
+                            console.log(otherBoarder[i])
+                            output += '<p>' + (i + 2) + '. ' + otherBoarder[i].fields.customer_name + '</p>'
+                        }
+                        document.getElementById(otherBoarder_list_id).innerHTML = output
+
+
+                    }
+
+                }
+            }
+        )
+    });
+
+
+    $(".btn-check-out").click(function (e) {
+        e.preventDefault()
+        let id = $(this).attr('data-room')
+        let phn = $(this).attr('data-phone')
+
+        console.log("aklsdjalsk")
+        mydata = {
+            room: id,
+            phone: phn,
+        }
+
+        $.ajax(
+            {
+                url: "{% url 'checkout' %}",
+                type: 'GET',
+                data: mydata,
+                success: function (data) {
+                    console.log("received")
+                }
+            }
+        )
+    });
+
+</script>

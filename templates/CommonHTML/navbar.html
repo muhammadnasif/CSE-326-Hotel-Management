@@ -1,20 +1,20 @@
 <nav class="navbar fixed-top navbar-expand-xl bg-dark navbar-dark">
+    <div class="nav-wrapper">
+        <a href="#" class="navbar-brand ms-4">
+            <p class="head-title"><b>Hotel Management </b> Int.</p>
+        </a>
+        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <div class="navbar-nav ms-auto text-center me-3">
 
-    <a href="#" class="navbar-brand ms-3">
-        <b>Hotel Management </b> Int.
-    </a>
-    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-        <div class="navbar-nav ms-auto text-center me-3">
+                <a class="nav-item nav-link" href="{% url 'home' %}" >Room</a>
+                <a class="nav-item nav-link" href="{% url 'customerSearch' %}">Customer search</a>
+                <a class="nav-item nav-link btn-danger btn ms-3 text-white" href="{% url 'LogOut' %}">Log Out</a>
 
-            <a class="nav-item nav-link" href="#">Home</a>
-            <a class="nav-item nav-link" href="#">Boarder</a>
-            <a class="nav-item nav-link" href="#">Bill</a>
-            <a class="nav-item nav-link btn-danger btn ms-3 text-white" href="#">Log Out</a>
-
+            </div>
         </div>
     </div>
 </nav>

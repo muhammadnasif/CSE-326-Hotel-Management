@@ -1,0 +1,714 @@
+{% for r in rooms1 %}
+<div class="modal fade" id="customer-visit_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row my-2">
+                        <div class="text-center">
+                            <h3>
+                                <b>
+                                    <u>
+                                        {{r.room_no}}
+                                    </u>
+                                </b>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-md-6">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Bill</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        2100
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Due</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        1750
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                       name="payDue"><label
+                                    for="pay_due_id">Pay</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                        </div>
+                    </div>
+
+                    <hr>
+
+
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone" disabled>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
+                                   disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" disabled>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="text-center">
+                                <h4>Other Boarder Info</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="otherBoarder_name_{{r.room_no}}" placeholder="Name"
+                                       name="otherBoarder_name" maxlength="60"><label
+                                    for="otherBoarder_name_{{r.room_no}}">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Add
+                            </button>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Undo
+                            </button>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-6" id="otherBoarder-list-id">
+                                <p>All Boarder: </p>
+                                <p>1. Muhammad Nasif Imtiaz ( <b> BILL </b> )</p>
+                                <div class="other-boarder" id="other-boarder-list-id_{{r.room_no}}">
+                                    <p>2. Mukit</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12">
+                            <div class="text-center">
+
+                                <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
+                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                    Check Out
+                                </button>
+                                <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
+                                        class="btn btn-primary btn-delete-customer-visit" data-sid="{{r.room_no}}">Delete
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% for r in rooms2 %}
+<div class="modal fade" id="customer-visit_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row my-2">
+                        <div class="text-center">
+                            <h3>
+                                <b>
+                                    <u>
+                                        {{r.room_no}}
+                                    </u>
+                                </b>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-md-6">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Bill</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        2100
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Due</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        1750
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                       name="payDue"><label
+                                    for="pay_due_id">Pay</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                        </div>
+                    </div>
+
+                    <hr>
+
+
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone" disabled>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
+                                   disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" disabled>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="text-center">
+                                <h4>Other Boarder Info</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="otherBoarder_name_{{r.room_no}}" placeholder="Name"
+                                       name="otherBoarder_name" maxlength="60"><label
+                                    for="otherBoarder_name_{{r.room_no}}">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Add
+                            </button>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Undo
+                            </button>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-6" id="otherBoarder-list-id">
+                                <p>All Boarder: </p>
+                                <p>1. Muhammad Nasif Imtiaz ( <b> BILL </b> )</p>
+                                <div class="other-boarder" id="other-boarder-list-id_{{r.room_no}}">
+                                    <p>2. Mukit</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12">
+                            <div class="text-center">
+
+                                <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
+                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                    Check Out
+                                </button>
+                                <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
+                                        class="btn btn-primary btn-delete-customer-visit" data-sid="{{r.room_no}}">Delete
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% for r in rooms3 %}
+<div class="modal fade" id="customer-visit_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row my-2">
+                        <div class="text-center">
+                            <h3>
+                                <b>
+                                    <u>
+                                        {{r.room_no}}
+                                    </u>
+                                </b>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-md-6">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Bill</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        2100
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Due</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        1750
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                       name="payDue"><label
+                                    for="pay_due_id">Pay</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                        </div>
+                    </div>
+
+                    <hr>
+
+
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone" disabled>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
+                                   disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" disabled>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="text-center">
+                                <h4>Other Boarder Info</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="otherBoarder_name_{{r.room_no}}" placeholder="Name"
+                                       name="otherBoarder_name" maxlength="60"><label
+                                    for="otherBoarder_name_{{r.room_no}}">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Add
+                            </button>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Undo
+                            </button>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-6" id="otherBoarder-list-id">
+                                <p>All Boarder: </p>
+                                <p>1. Muhammad Nasif Imtiaz ( <b> BILL </b> )</p>
+                                <div class="other-boarder" id="other-boarder-list-id_{{r.room_no}}">
+                                    <p>2. Mukit</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12">
+                            <div class="text-center">
+
+                                <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
+                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                    Check Out
+                                </button>
+                                <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
+                                        class="btn btn-primary btn-delete-customer-visit" data-sid="{{r.room_no}}">Delete
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% for r in rooms4 %}
+<div class="modal fade" id="customer-visit_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row my-2">
+                        <div class="text-center">
+                            <h3>
+                                <b>
+                                    <u>
+                                        {{r.room_no}}
+                                    </u>
+                                </b>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-md-6">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Bill</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        2100
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Due</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        1750
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                       name="payDue"><label
+                                    for="pay_due_id">Pay</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                        </div>
+                    </div>
+
+                    <hr>
+
+
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone" disabled>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
+                                   disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" disabled>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="text-center">
+                                <h4>Other Boarder Info</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="otherBoarder_name_{{r.room_no}}" placeholder="Name"
+                                       name="otherBoarder_name" maxlength="60"><label
+                                    for="otherBoarder_name_{{r.room_no}}">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Add
+                            </button>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Undo
+                            </button>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-6" id="otherBoarder-list-id">
+                                <p>All Boarder: </p>
+                                <p>1. Muhammad Nasif Imtiaz ( <b> BILL </b> )</p>
+                                <div class="other-boarder" id="other-boarder-list-id_{{r.room_no}}">
+                                    <p>2. Mukit</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12">
+                            <div class="text-center">
+
+                                <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
+                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                    Check Out
+                                </button>
+                                <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
+                                        class="btn btn-primary btn-delete-customer-visit" data-sid="{{r.room_no}}">Delete
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% for r in rooms5 %}
+<div class="modal fade" id="customer-visit_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row my-2">
+                        <div class="text-center">
+                            <h3>
+                                <b>
+                                    <u>
+                                        {{r.room_no}}
+                                    </u>
+                                </b>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-md-6">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Bill</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        2100
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><h4>Total Due</h4></div>
+                                <div class="card-body text-end">
+                                    <h5>
+                                        1750
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                       name="payDue"><label
+                                    for="pay_due_id">Pay</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                        </div>
+                    </div>
+
+                    <hr>
+
+
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone" disabled>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
+                                   disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" disabled>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="text-center">
+                                <h4>Other Boarder Info</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="otherBoarder_name_{{r.room_no}}" placeholder="Name"
+                                       name="otherBoarder_name" maxlength="60"><label
+                                    for="otherBoarder_name_{{r.room_no}}">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Add
+                            </button>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
+                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                Undo
+                            </button>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-6" id="otherBoarder-list-id">
+                                <p>All Boarder: </p>
+                                <p>1. Muhammad Nasif Imtiaz ( <b> BILL </b> )</p>
+                                <div class="other-boarder" id="other-boarder-list-id_{{r.room_no}}">
+                                    <p>2. Mukit</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12">
+                            <div class="text-center">
+
+                                <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
+                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                    Check Out
+                                </button>
+                                <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
+                                        class="btn btn-primary btn-delete-customer-visit" data-sid="{{r.room_no}}">Delete
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

@@ -1,0 +1,244 @@
+{% for r in rooms1 %}
+<div class="modal fade" id="exampleModal_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>{{r.room_no}}</h4>
+                <h5 class="modal-title" id="exampleModalLabel">Check In </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName_{{r.room_no}}" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone_{{r.room_no}}" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress_{{r.room_no}}" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress_{{r.room_no}}" placeholder="Gulshan, Dhaka">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID_{{r.room_no}}" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail_{{r.room_no}}" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <div class="text-center">
+                                <button data-bs-dismiss="modal" id="checkin_submit_1" type="button" class="btn btn-primary" data-room="{{r.room_no}}" >Check in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% for r in rooms2 %}
+<div class="modal fade" id="exampleModal_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>{{r.room_no}}</h4>
+                <h5 class="modal-title" id="exampleModalLabel">Check In </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName_{{r.room_no}}" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone_{{r.room_no}}" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress_{{r.room_no}}" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress_{{r.room_no}}" placeholder="Gulshan, Dhaka">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID_{{r.room_no}}" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail_{{r.room_no}}" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <div class="text-center">
+                                <button data-bs-dismiss="modal" id="checkin_submit_2" type="button" class="btn btn-primary" data-room="{{r.room_no}}" >Check in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% for r in rooms3 %}
+<div class="modal fade" id="exampleModal_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>{{r.room_no}}</h4>
+                <h5 class="modal-title" id="exampleModalLabel">Check In </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName_{{r.room_no}}" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone_{{r.room_no}}" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress_{{r.room_no}}" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress_{{r.room_no}}" placeholder="Gulshan, Dhaka">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID_{{r.room_no}}" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail_{{r.room_no}}" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <div class="text-center">
+                                <button data-bs-dismiss="modal" id="checkin_submit_3" type="button" class="btn btn-primary" data-room="{{r.room_no}}" >Check in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% for r in rooms4 %}
+<div class="modal fade" id="exampleModal_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>{{r.room_no}}</h4>
+                <h5 class="modal-title" id="exampleModalLabel">Check In </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName_{{r.room_no}}" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone_{{r.room_no}}" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress_{{r.room_no}}" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress_{{r.room_no}}" placeholder="Gulshan, Dhaka">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID_{{r.room_no}}" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail_{{r.room_no}}" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <div class="text-center">
+                                <button data-bs-dismiss="modal" id="checkin_submit_4" type="button" class="btn btn-primary" data-room="{{r.room_no}}" >Check in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% for r in rooms5 %}
+<div class="modal fade" id="exampleModal_{{r.room_no}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>{{r.room_no}}</h4>
+                <h5 class="modal-title" id="exampleModalLabel">Check In </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form class="row g-3" action="" id="checkin_form_1">
+                        <div class="col-md-6">
+                            <label for="inputName_{{r.room_no}}" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPhone_{{r.room_no}}" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="inputPhone_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress_{{r.room_no}}" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress_{{r.room_no}}" placeholder="Gulshan, Dhaka">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNID_{{r.room_no}}" class="form-label">NID</label>
+                            <input type="number" class="form-control" id="inputNID_{{r.room_no}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail_{{r.room_no}}" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail_{{r.room_no}}">
+                        </div>
+                        <div class="col-12">
+                            <div class="text-center">
+                                <button data-bs-dismiss="modal" id="checkin_submit_5" type="button" class="btn btn-primary" data-room="{{r.room_no}}" >Check in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
