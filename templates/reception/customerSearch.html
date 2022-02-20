@@ -2,7 +2,27 @@
 {% load static %}
 {% block RoomGUI %}
     <div class="wrapper">
+        <div class="wrap">
+            <div class="search">
+              <input type="text" class="searchTerm" placeholder="What are you looking for?">
+              <button type="submit" class="searchButton">
+                  <img src="{% static 'img/search_icon.jpg' %}" class="search_icon">
+             </button>
+           </div>
+        </div>
 
+        <div class="dropdown_menu">
+            <details class="dropdown">
+                <summary role="button" class="search_btn">
+                    <a class="button">Category</a>
+                </summary>
+                <ul>
+                    <li value="1"><a href="#">Name</a></li>
+                    <li value="2"><a href="#">Phone No</a></li>
+                    <li value="3"><a href="#">NID</a></li>
+                </ul>
+            </details>
+        </div>
     </div>
 {% endblock %}
 {% block homepagescript %}

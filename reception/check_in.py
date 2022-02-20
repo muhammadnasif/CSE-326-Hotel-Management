@@ -117,7 +117,7 @@ def undoOtherBoarder(request):
         otherBoarder.delete()
 
         phone = request.GET['phone']
-#         customer_visit = CUSTOMER_VISIT.objects.get(customer__phone=phone, check_out=None)
+        #         customer_visit = CUSTOMER_VISIT.objects.get(customer__phone=phone, check_out=None)
         customer_visit = CUSTOMER_VISIT.objects.get(room_no__room_no=room, check_out=None)
         allOtherBoarder = OTHER_BOARDER.objects.filter(customer_visit_id=customer_visit.id)
         allOtherBoarder = serializers.serialize('json', allOtherBoarder)
@@ -134,25 +134,42 @@ def checkout(request):
     context = {}
     name = request.GET['room']
     phone = request.GET['phone']
-    thisTime = datetime.datetime.now()
-    CreateInvoice(name, phone, thisTime)
+    print("in checkout " + name + " and " + phone)
+
+    customer_visit = CUSTOMER_VISIT.objects.get(check_out=None, customer__phone=phone)
+    print(customer_visit)
+    if customer_visit.due_bill != 0:
+        print("due baki ase. teka de")
+        context['status'] = 0
+    else:
+        context['status'] = 1
+        thisTime = datetime.datetime.now()
+        print("due nai, invoice hobe ekhon")
+        CreateInvoice(name, phone, thisTime)
 
     return JsonResponse(context)
 
-def CreateInvoice(name, phone, dateTime):
-    customer_visit = CUSTOMER_VISIT.objects.get(check_out=None, customer__phone=phone)
-    print(customer_visit)
 
+def CreateInvoice(room_num, phone, dateTime):
+    customer_visit = CUSTOMER_VISIT.objects.get(check_out=None, room_no__room_no=room_num, customer__phone=phone)
+    print(customer_visit)
     checkin = customer_visit.check_in
     checkout = dateTime
-    customer_name = name
+    customer_name = customer_visit.customer.name
     total_bill = customer_visit.total_bill
     otherBoarder = []
-
     queryBoarder = OTHER_BOARDER.objects.filter(customer_visit_id=customer_visit.id)
-
     for boarder in queryBoarder:
         otherBoarder.append(boarder.customer_name)
+
+    inv = INVOICE(customer_visit=customer_visit, total_bill=customer_visit.total_bill)
+    inv.save()
+
+    print("invoice banano hoise in invoice function")
+
+    room = ROOM.objects.get(room_no=room_num)
+    room.availability = 0
+    room.save()
 
 
 def payDue(request):

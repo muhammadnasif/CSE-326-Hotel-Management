@@ -58,24 +58,23 @@
                     <form class="row g-3" action="" id="checkin_form_1">
                         <div class="col-md-6">
                             <label for="inputName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="inputName" disabled>
+                            <input type="text" class="form-control" id="inputName" value="{{r.name}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPhone" class="form-label">Phone</label>
-                            <input type="number" class="form-control" id="inputPhone" disabled>
+                            <input type="number" class="form-control" id="inputPhone" value="{{r.phone}}" disabled>
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
-                                   disabled>
+                            <input type="text" class="form-control" id="inputAddress" value="{{r.address}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputNID" class="form-label">NID</label>
-                            <input type="number" class="form-control" id="inputNID" disabled>
+                            <input type="number" class="form-control" id="inputNID" value="{{r.nid}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" disabled>
+                            <input type="email" class="form-control" id="inputEmail" value="{{r.email}}" disabled>
                         </div>
                         <hr>
                         <div class="row">
@@ -92,13 +91,13 @@
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Add
                             </button>
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Undo
                             </button>
                         </div>
@@ -121,7 +120,7 @@
                             <div class="text-center">
 
                                 <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
-                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                        data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                     Check Out
                                 </button>
                                 <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
@@ -201,24 +200,23 @@
                     <form class="row g-3" action="" id="checkin_form_1">
                         <div class="col-md-6">
                             <label for="inputName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="inputName" disabled>
+                            <input type="text" class="form-control" id="inputName" value="{{r.name}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPhone" class="form-label">Phone</label>
-                            <input type="number" class="form-control" id="inputPhone" disabled>
+                            <input type="number" class="form-control" id="inputPhone" value="{{r.phone}}" disabled>
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
-                                   disabled>
+                            <input type="text" class="form-control" id="inputAddress" value="{{r.address}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputNID" class="form-label">NID</label>
-                            <input type="number" class="form-control" id="inputNID" disabled>
+                            <input type="number" class="form-control" id="inputNID" value="{{r.nid}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" disabled>
+                            <input type="email" class="form-control" id="inputEmail" value="{{r.email}}" disabled>
                         </div>
                         <hr>
                         <div class="row">
@@ -235,13 +233,13 @@
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Add
                             </button>
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Undo
                             </button>
                         </div>
@@ -264,7 +262,7 @@
                             <div class="text-center">
 
                                 <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
-                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                        data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                     Check Out
                                 </button>
                                 <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
@@ -344,24 +342,23 @@
                     <form class="row g-3" action="" id="checkin_form_1">
                         <div class="col-md-6">
                             <label for="inputName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="inputName" disabled>
+                            <input type="text" class="form-control" id="inputName" value="{{r.name}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPhone" class="form-label">Phone</label>
-                            <input type="number" class="form-control" id="inputPhone" disabled>
+                            <input type="number" class="form-control" id="inputPhone" value="{{r.phone}}" disabled>
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
-                                   disabled>
+                            <input type="text" class="form-control" id="inputAddress" value="{{r.address}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputNID" class="form-label">NID</label>
-                            <input type="number" class="form-control" id="inputNID" disabled>
+                            <input type="number" class="form-control" id="inputNID" value="{{r.nid}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" disabled>
+                            <input type="email" class="form-control" id="inputEmail" value="{{r.email}}" disabled>
                         </div>
                         <hr>
                         <div class="row">
@@ -378,13 +375,13 @@
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Add
                             </button>
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Undo
                             </button>
                         </div>
@@ -407,7 +404,7 @@
                             <div class="text-center">
 
                                 <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
-                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                        data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                     Check Out
                                 </button>
                                 <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
@@ -487,24 +484,23 @@
                     <form class="row g-3" action="" id="checkin_form_1">
                         <div class="col-md-6">
                             <label for="inputName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="inputName" disabled>
+                            <input type="text" class="form-control" id="inputName" value="{{r.name}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPhone" class="form-label">Phone</label>
-                            <input type="number" class="form-control" id="inputPhone" disabled>
+                            <input type="number" class="form-control" id="inputPhone" value="{{r.phone}}" disabled>
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
-                                   disabled>
+                            <input type="text" class="form-control" id="inputAddress" value="{{r.address}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputNID" class="form-label">NID</label>
-                            <input type="number" class="form-control" id="inputNID" disabled>
+                            <input type="number" class="form-control" id="inputNID" value="{{r.nid}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" disabled>
+                            <input type="email" class="form-control" id="inputEmail" value="{{r.email}}" disabled>
                         </div>
                         <hr>
                         <div class="row">
@@ -521,13 +517,13 @@
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Add
                             </button>
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Undo
                             </button>
                         </div>
@@ -550,7 +546,7 @@
                             <div class="text-center">
 
                                 <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
-                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                        data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                     Check Out
                                 </button>
                                 <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
@@ -630,24 +626,23 @@
                     <form class="row g-3" action="" id="checkin_form_1">
                         <div class="col-md-6">
                             <label for="inputName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="inputName" disabled>
+                            <input type="text" class="form-control" id="inputName" value="{{r.name}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPhone" class="form-label">Phone</label>
-                            <input type="number" class="form-control" id="inputPhone" disabled>
+                            <input type="number" class="form-control" id="inputPhone" value="{{r.phone}}" disabled>
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Gulshan, Dhaka"
-                                   disabled>
+                            <input type="text" class="form-control" id="inputAddress" value="{{r.address}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputNID" class="form-label">NID</label>
-                            <input type="number" class="form-control" id="inputNID" disabled>
+                            <input type="number" class="form-control" id="inputNID" value="{{r.nid}}" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" disabled>
+                            <input type="email" class="form-control" id="inputEmail" value="{{r.email}}" disabled>
                         </div>
                         <hr>
                         <div class="row">
@@ -664,13 +659,13 @@
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-add-otherBoarder" id="otherboarder-btn"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Add
                             </button>
                         </div>
                         <div class="col-md-3 text-center">
                             <button class="btn btn-outline-primary mt-2 btn-undo-otherBoarder" id="otherboarder-btn-undo"
-                                    data-room="{{r.room_no}}" data-phone="01706363005">
+                                    data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                 Undo
                             </button>
                         </div>
@@ -693,7 +688,7 @@
                             <div class="text-center">
 
                                 <button class="btn btn-outline-primary btn-check-out" id="checkout_submit_1"
-                                        data-room="{{r.room_no}}" data-phone="01706363005">
+                                        data-room="{{r.room_no}}" data-phone="{{r.phone}}">
                                     Check Out
                                 </button>
                                 <button data-bs-dismiss="modal" id="checkin_delete_1" type="button"
@@ -712,4 +707,3 @@
     </div>
 </div>
 {% endfor %}
-
