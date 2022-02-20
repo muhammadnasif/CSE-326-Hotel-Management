@@ -4,9 +4,10 @@
     <div class="wrapper">
         <div class="wrap">
             <div class="search">
-              <input type="text" class="searchTerm" placeholder="What are you looking for?">
+              <input type="text" class="searchTerm" placeholder="Who are you looking for?">
               <button type="submit" class="searchButton">
-                  <img src="{% static 'img/search_icon.jpg' %}" class="search_icon">
+<!--                  <img src="{% static 'img/search_icon.jpg' %}" class="search_icon">-->
+                  <i class="fa fa-search"></i>
              </button>
            </div>
         </div>
@@ -14,7 +15,7 @@
         <div class="dropdown_menu">
             <details class="dropdown">
                 <summary role="button" class="search_btn">
-                    <a class="button">Category</a>
+                    <i class="fa-3x fa-solid fa-circle-chevron-down"></i>
                 </summary>
                 <ul>
                     <li value="1"><a href="#">Name</a></li>
@@ -28,5 +29,6 @@
 {% block homepagescript %}
 {% load static %}
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/6ced2637f4.js" crossorigin="anonymous"></script>
 {% include 'CommonHTML/ajax.html' %}
 {% endblock %}

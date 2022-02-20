@@ -1,15 +1,24 @@
 .search {
   width: 100%;
+  margin: 7% 50%;
   position: relative;
   display: flex;
 }
+.fa-circle-chevron-down {
+  color: #00B4CC;
+}
+.search_btn{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -4%;
 
+}
 .searchTerm {
   width: 100%;
   border: 3px solid #00B4CC;
   border-right: none;
   padding: 5px;
-  height: 20px;
+  height: 3.6rem;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
@@ -33,7 +42,7 @@
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 30%;
+  width: 50%;
   margin: 0 auto;
   /*position: absolute;
   top: 50%;
@@ -55,6 +64,8 @@
   --dropdown-background: white;
   --dropdown-color: black;
 }
+
+
 
 
 /* Boring button styles */
