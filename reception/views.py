@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from reception.models import ROOM
+from reception.models import *
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 
@@ -165,6 +165,14 @@ def home(request):
                 dRoom1['color'] = "green"
             elif r.availability == 1:
                 dRoom1['color'] = "red"
+                dRoom1['total_bill'] = r.fare
+                customer_visit = CUSTOMER_VISIT.objects.get(room_no__room_no=r.room_no, check_out=None)
+                dRoom1['total_due'] = customer_visit.due_bill
+                dRoom1['name'] = customer_visit.customer.name
+                dRoom1['phone'] = customer_visit.customer.phone
+                dRoom1['address'] = customer_visit.customer.address
+                dRoom1['nid'] = customer_visit.customer.nid
+                dRoom1['email'] = customer_visit.customer.email
             else:
                 dRoom1['color'] = "yellow"
             dRC = dRoom1.copy()
@@ -181,6 +189,14 @@ def home(request):
                 dRoom2['color'] = "green"
             elif r.availability == 1:
                 dRoom2['color'] = "red"
+                dRoom2['total_bill'] = r.fare
+                customer_visit = CUSTOMER_VISIT.objects.get(room_no__room_no=r.room_no, check_out=None)
+                dRoom2['total_due'] = customer_visit.due_bill
+                dRoom2['name'] = customer_visit.customer.name
+                dRoom2['phone'] = customer_visit.customer.phone
+                dRoom2['address'] = customer_visit.customer.address
+                dRoom2['nid'] = customer_visit.customer.nid
+                dRoom2['email'] = customer_visit.customer.email
             else:
                 dRoom2['color'] = "yellow"
             dRC = dRoom2.copy()
@@ -197,6 +213,14 @@ def home(request):
                 dRoom3['color'] = "green"
             elif r.availability == 1:
                 dRoom3['color'] = "red"
+                dRoom3['total_bill'] = r.fare
+                customer_visit = CUSTOMER_VISIT.objects.get(room_no__room_no=r.room_no, check_out=None)
+                dRoom3['total_due'] = customer_visit.due_bill
+                dRoom3['name'] = customer_visit.customer.name
+                dRoom3['phone'] = customer_visit.customer.phone
+                dRoom3['address'] = customer_visit.customer.address
+                dRoom3['nid'] = customer_visit.customer.nid
+                dRoom3['email'] = customer_visit.customer.email
             else:
                 dRoom3['color'] = "yellow"
             dRC = dRoom3.copy()
@@ -213,6 +237,14 @@ def home(request):
                 dRoom4['color'] = "green"
             elif r.availability == 1:
                 dRoom4['color'] = "red"
+                dRoom4['total_bill'] = r.fare
+                customer_visit = CUSTOMER_VISIT.objects.get(room_no__room_no=r.room_no, check_out=None)
+                dRoom4['total_due'] = customer_visit.due_bill
+                dRoom4['name'] = customer_visit.customer.name
+                dRoom4['phone'] = customer_visit.customer.phone
+                dRoom4['address'] = customer_visit.customer.address
+                dRoom4['nid'] = customer_visit.customer.nid
+                dRoom4['email'] = customer_visit.customer.email
             else:
                 dRoom4['color'] = "yellow"
             dRC = dRoom4.copy()
@@ -229,6 +261,14 @@ def home(request):
                 dRoom5['color'] = "green"
             elif r.availability == 1:
                 dRoom5['color'] = "red"
+                dRoom5['total_bill'] = r.fare
+                customer_visit = CUSTOMER_VISIT.objects.get(room_no__room_no=r.room_no, check_out=None)
+                dRoom5['total_due'] = customer_visit.due_bill
+                dRoom5['name'] = customer_visit.customer.name
+                dRoom5['phone'] = customer_visit.customer.phone
+                dRoom5['address'] = customer_visit.customer.address
+                dRoom5['nid'] = customer_visit.customer.nid
+                dRoom5['email'] = customer_visit.customer.email
             else:
                 dRoom5['color'] = "yellow"
             dRC = dRoom5.copy()

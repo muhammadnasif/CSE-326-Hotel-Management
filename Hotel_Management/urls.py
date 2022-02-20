@@ -34,6 +34,7 @@ urlpatterns = [
     path('undoOtherBoarder/', reception_checkin.undoOtherBoarder, name='undoOtherBoarder'),
     path('checkout/', reception_checkin.checkout, name='checkout'),
     path('customerSearch/', customerSearchView.customerSearch, name='customerSearch'),
+    path('payDue/', reception_checkin.payDue, name='payDue'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += staticfiles_urlpatterns()

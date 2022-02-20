@@ -20,8 +20,8 @@
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Bill</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        2100
+                                    <h5 id = "total_bill_{{r.room_no}}">
+                                        {{r.total_bill}}
                                     </h5>
                                 </div>
                             </div>
@@ -30,8 +30,8 @@
                             <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Due</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        1750
+                                    <h5 id = "total_due_{{r.room_no}}">
+                                        {{r.total_due}}
                                     </h5>
                                 </div>
                             </div>
@@ -42,13 +42,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                <input type="number" class="form-control" id="pay_due_{{r.room_no}}" placeholder="Pay Due"
                                        name="payDue"><label
-                                    for="pay_due_id">Pay</label>
+                                    for="pay_due_{{r.room_no}}">Pay</label>
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
-                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2" data-room="{{r.room_no}}">Pay Due</button>
                         </div>
                     </div>
 
@@ -163,8 +163,8 @@
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Bill</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        2100
+                                    <h5 id = "total_bill_{{r.room_no}}">
+                                        {{r.total_bill}}
                                     </h5>
                                 </div>
                             </div>
@@ -173,8 +173,8 @@
                             <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Due</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        1750
+                                    <h5 id = "total_due_{{r.room_no}}">
+                                        {{r.total_due}}
                                     </h5>
                                 </div>
                             </div>
@@ -185,13 +185,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                <input type="number" class="form-control" id="pay_due_{{r.room_no}}" placeholder="Pay Due"
                                        name="payDue"><label
-                                    for="pay_due_id">Pay</label>
+                                    for="pay_due_{{r.room_no}}">Pay</label>
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
-                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2" data-room="{{r.room_no}}">Pay Due</button>
                         </div>
                     </div>
 
@@ -306,8 +306,8 @@
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Bill</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        2100
+                                    <h5 id = "total_bill_{{r.room_no}}">
+                                        {{r.total_bill}}
                                     </h5>
                                 </div>
                             </div>
@@ -316,8 +316,8 @@
                             <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Due</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        1750
+                                    <h5 id = "total_due_{{r.room_no}}">
+                                        {{r.total_due}}
                                     </h5>
                                 </div>
                             </div>
@@ -328,13 +328,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                <input type="number" class="form-control" id="pay_due_{{r.room_no}}" placeholder="Pay Due"
                                        name="payDue"><label
-                                    for="pay_due_id">Pay</label>
+                                    for="pay_due_{{r.room_no}}">Pay</label>
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
-                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2" data-room="{{r.room_no}}">Pay Due</button>
                         </div>
                     </div>
 
@@ -449,8 +449,8 @@
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Bill</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        2100
+                                    <h5 id = "total_bill_{{r.room_no}}">
+                                        {{r.total_bill}}
                                     </h5>
                                 </div>
                             </div>
@@ -459,8 +459,8 @@
                             <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Due</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        1750
+                                    <h5 id = "total_due_{{r.room_no}}">
+                                        {{r.total_due}}
                                     </h5>
                                 </div>
                             </div>
@@ -471,13 +471,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                <input type="number" class="form-control" id="pay_due_{{r.room_no}}" placeholder="Pay Due"
                                        name="payDue"><label
-                                    for="pay_due_id">Pay</label>
+                                    for="pay_due_{{r.room_no}}">Pay</label>
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
-                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2" data-room="{{r.room_no}}">Pay Due</button>
                         </div>
                     </div>
 
@@ -592,8 +592,8 @@
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Bill</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        2100
+                                    <h5 id = "total_bill_{{r.room_no}}">
+                                        {{r.total_bill}}
                                     </h5>
                                 </div>
                             </div>
@@ -602,8 +602,8 @@
                             <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                                 <div class="card-header"><h4>Total Due</h4></div>
                                 <div class="card-body text-end">
-                                    <h5>
-                                        1750
+                                    <h5 id = "total_due_{{r.room_no}}">
+                                        {{r.total_due}}
                                     </h5>
                                 </div>
                             </div>
@@ -614,13 +614,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="number" class="form-control" id="pay_due_id" placeholder="Pay Due"
+                                <input type="number" class="form-control" id="pay_due_{{r.room_no}}" placeholder="Pay Due"
                                        name="payDue"><label
-                                    for="pay_due_id">Pay</label>
+                                    for="pay_due_{{r.room_no}}">Pay</label>
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
-                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2">Pay Due</button>
+                            <button id="pay_due_btn_id" class="btn btn-outline-success mt-2" data-room="{{r.room_no}}">Pay Due</button>
                         </div>
                     </div>
 
@@ -712,3 +712,4 @@
     </div>
 </div>
 {% endfor %}
+

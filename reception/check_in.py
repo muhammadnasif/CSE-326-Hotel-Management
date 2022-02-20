@@ -155,5 +155,16 @@ def CreateInvoice(name, phone, dateTime):
         otherBoarder.append(boarder.customer_name)
 
 
+def payDue(request):
+    print(request.GET)
+    amount = request.GET['amount']
+    room = request.GET['room']
+    customer_visit = CUSTOMER_VISIT.objects.get(room_no__room_no=room, check_out=None)
+    customer_visit.due_bill -= int(amount)
+    customer_visit.save()
 
+    context = {
+        'due': customer_visit.due_bill
+    }
 
+    return JsonResponse(context)

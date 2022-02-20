@@ -409,4 +409,28 @@
         )
     });
 
+    $(".btn-outline-success").click(function (e) {
+        e.preventDefault()
+        console.log("Paying Due")
+        let id = $(this).attr('data-room')
+        console.log(id)
+        valoo = '#pay_due_'+id
+        amount = $(valoo).val()
+        mydata = {
+            amount: amount,
+            room: id,
+        }
+        $.ajax(
+            {
+                url: "{% url 'payDue' %}",
+                type: 'GET',
+                data: mydata,
+                success: function (data) {
+                    btn_id = "total_due_" + id
+                    document.getElementById(btn_id).innerHTML = data.due
+                }
+            }
+        )
+    });
+
 </script>
